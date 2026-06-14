@@ -1,5 +1,4 @@
 "use client";
-import { LuxImage } from "./LuxImage";
 import { Typewriter } from "./Typewriter";
 import { ScreenBg } from "./ScreenBg";
 import type { FinalResult } from "@/lib/types";
@@ -41,10 +40,8 @@ export function ResultScreen({
             : "radial-gradient(circle at 50% 40%, rgba(26,16,38,0.45), rgba(5,6,10,0.7) 65%, rgba(5,6,10,0.9) 95%)"
         }
       />
-      <LuxImage light={correct ? 100 : Math.max(20, result.lightRecovery)} size={130} />
-
       <p
-        className="mt-6 font-serif text-sm tracking-[0.4em]"
+        className="font-serif text-sm tracking-[0.4em]"
         style={{ color: correct ? "#FFF4C2" : "#A8B0BD" }}
       >
         {correct ? "LIGHT RESTORED" : "LIGHT LOST"}
