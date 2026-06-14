@@ -3,6 +3,7 @@ import { useState } from "react";
 import { LuxLantern } from "./LuxLantern";
 import { LightGauge } from "./LightGauge";
 import { MemoryLog } from "./MemoryLog";
+import { ScreenBg } from "./ScreenBg";
 import type { Message } from "@/lib/types";
 
 export function GameScreen({
@@ -39,6 +40,11 @@ export function GameScreen({
 
   return (
     <div className="mx-auto flex min-h-[100dvh] w-full max-w-4xl flex-col px-4 py-5">
+      <ScreenBg
+        image="/images/game-bg.png"
+        fallback="linear-gradient(160deg, #0D1320 0%, #05060A 80%)"
+        dim={0.6}
+      />
       <header className="mb-4">
         <div className="flex items-baseline justify-between">
           <h1 className="font-serif text-xl tracking-widest text-candle">

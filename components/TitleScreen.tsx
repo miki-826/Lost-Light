@@ -1,5 +1,6 @@
 "use client";
 import { LuxLantern } from "./LuxLantern";
+import { ScreenBg } from "./ScreenBg";
 
 export function TitleScreen({
   onStart,
@@ -9,7 +10,12 @@ export function TitleScreen({
   onHowTo: () => void;
 }) {
   return (
-    <div className="flex min-h-[100dvh] flex-col items-center justify-center px-6 text-center animate-dawn">
+    <div className="relative flex min-h-[100dvh] flex-col items-center justify-center px-6 text-center animate-dawn">
+      <ScreenBg
+        image="/images/title-bg.png"
+        fallback="radial-gradient(circle at 50% 40%, #0D1320 0%, #05060A 70%)"
+        dim={0.5}
+      />
       <div className="mb-2 animate-rise">
         <LuxLantern light={28} size={150} />
       </div>

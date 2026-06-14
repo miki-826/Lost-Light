@@ -1,6 +1,7 @@
 "use client";
 import { LuxLantern } from "./LuxLantern";
 import { Typewriter } from "./Typewriter";
+import { ScreenBg } from "./ScreenBg";
 import type { FinalResult } from "@/lib/types";
 
 function Stat({ label, value }: { label: string; value: number }) {
@@ -26,14 +27,20 @@ export function ResultScreen({
   const correct = result.isCorrect;
 
   return (
-    <div
-      className="flex min-h-[100dvh] flex-col items-center justify-center px-6 py-10 text-center animate-dawn"
-      style={{
-        background: correct
-          ? "radial-gradient(circle at 50% 30%, rgba(246,211,101,0.18), rgba(5,6,10,0) 60%)"
-          : "radial-gradient(circle at 50% 40%, rgba(26,16,38,0.6), rgba(5,6,10,0) 65%)",
-      }}
-    >
+    <div className="relative flex min-h-[100dvh] flex-col items-center justify-center px-6 py-10 text-center animate-dawn">
+      <ScreenBg
+        image={correct ? "/images/result-success-bg.png" : "/images/result-fail-bg.png"}
+        fallback={
+          correct
+            ? "radial-gradient(circle at 50% 30%, #1a1505 0%, #05060A 70%)"
+            : "radial-gradient(circle at 50% 40%, #1A1026 0%, #05060A 72%)"
+        }
+        overlay={
+          correct
+            ? "radial-gradient(circle at 50% 28%, rgba(246,211,101,0.16), rgba(5,6,10,0.55) 60%, rgba(5,6,10,0.85) 95%)"
+            : "radial-gradient(circle at 50% 40%, rgba(26,16,38,0.45), rgba(5,6,10,0.7) 65%, rgba(5,6,10,0.9) 95%)"
+        }
+      />
       <LuxLantern light={correct ? 100 : Math.max(20, result.lightRecovery)} size={130} />
 
       <p
