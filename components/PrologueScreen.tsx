@@ -1,5 +1,5 @@
 "use client";
-import { LuxLantern } from "./LuxLantern";
+import { LuxImage } from "./LuxImage";
 import { Typewriter } from "./Typewriter";
 
 const PROLOGUE =
@@ -8,7 +8,7 @@ const PROLOGUE =
 export function PrologueScreen({ onBegin }: { onBegin: () => void }) {
   return (
     <div className="flex min-h-[100dvh] flex-col items-center justify-center px-6 text-center animate-dawn">
-      <LuxLantern light={20} size={120} />
+      <LuxImage light={20} size={120} />
       <div className="mt-8 max-w-md min-h-[8rem]">
         <p className="font-serif text-lg leading-loose text-candle">
           <Typewriter text={PROLOGUE} speed={55} className="whitespace-pre-line" />

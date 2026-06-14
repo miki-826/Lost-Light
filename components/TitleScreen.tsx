@@ -1,5 +1,5 @@
 "use client";
-import { LuxLantern } from "./LuxLantern";
+import { LuxImage } from "./LuxImage";
 import { ScreenBg } from "./ScreenBg";
 
 export function TitleScreen({
@@ -17,7 +17,7 @@ export function TitleScreen({
         dim={0.5}
       />
       <div className="mb-2 animate-rise">
-        <LuxLantern light={28} size={150} />
+        <LuxImage light={28} size={150} />
       </div>
       <h1 className="font-serif text-5xl sm:text-6xl tracking-[0.2em] text-candle text-glow">
         Lost Light

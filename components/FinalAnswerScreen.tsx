@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { LuxLantern } from "./LuxLantern";
+import { LuxImage } from "./LuxImage";
 import { ScreenBg } from "./ScreenBg";
 
 export function FinalAnswerScreen({
@@ -32,7 +32,7 @@ export function FinalAnswerScreen({
         fallback="radial-gradient(circle at 50% 40%, #0D1320 0%, #05060A 75%)"
         dim={0.68}
       />
-      <LuxLantern light={lightGauge} size={140} />
+      <LuxImage light={lightGauge} size={140} />
       <h2 className="mt-8 font-serif text-2xl tracking-wider text-candle text-glow">
         最後の推理
       </h2>

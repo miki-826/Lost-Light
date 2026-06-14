@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { LuxLantern } from "./LuxLantern";
+import { LuxImage } from "./LuxImage";
 import { LightGauge } from "./LightGauge";
 import { MemoryLog } from "./MemoryLog";
 import { ScreenBg } from "./ScreenBg";
@@ -62,7 +62,7 @@ export function GameScreen({
 
       <div className="grid flex-1 grid-cols-1 gap-4 md:grid-cols-2">
         <section className="flex flex-col items-center justify-center rounded-lg border border-line bg-ink/40 py-8">
-          <LuxLantern light={lightGauge} size={170} />
+          <LuxImage light={lightGauge} size={170} />
           <p className="mt-4 text-xs tracking-[0.3em] text-cyan-quiet/70">LUX</p>
         </section>
 
